@@ -4,5 +4,4 @@ def add(numbers:int)->int:
     else:
         num_list= numbers.split(",")
         res = sum(int(n) for n in num_list)
-        print(res,"------")
         return res

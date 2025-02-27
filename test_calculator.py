@@ -8,6 +8,10 @@ def test_string_return_single_number():
 
 
 def test_two_number_string():
-    assert add("1,5,4,7,3,8,2,9") == 39
+    assert add("1,5") == 6
+
+
+def test_multiple_number_string():
+    assert add("1,5,9") == 15
 
 
