@@ -14,4 +14,7 @@ def test_two_number_string():
 def test_multiple_number_string():
     assert add("1,5,9") == 15
 
+def test_new_lines_as_delimiter():
+    assert add("1\n2\n3") == 6
+
 
