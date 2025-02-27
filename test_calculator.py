@@ -1,5 +1,7 @@
 from calculator import add
 
+import pytest
+
 def test_empty_string():
     assert add("") == 0
 
@@ -20,4 +22,10 @@ def test_new_lines_as_delimiter():
 def test_custom_delimters():
     assert add("//;\n1;2") == 3
 
+def test_negative_numbers_throw_an_exception():
+    with pytest.raises(ValueError,match="negative numbers not allowed -2"):
+        add("1,-2")
 
+def test_multi_negative_numbers_show():
+    with pytest.raises(ValueError,match="negative numbers not allowed -1, -2"):
+        add("-1,-2,3")
