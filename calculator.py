@@ -1,6 +1,8 @@
-def add(numbers)->int:
+def add(numbers:int)->int:
     if numbers == "":
         return 0
     else:
         num_list= numbers.split(",")
-        return sum(int(n) for n in num_list)
+        res = sum(int(n) for n in num_list)
+        print(res,"------")
+        return res
