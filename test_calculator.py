@@ -31,3 +31,6 @@ def test_multi_negative_numbers_show():
         add("-1,-2,3")
 def test_ignore_if_numbers_a_1000():
     assert add("1,1001") == 1
+
+# def test_custom_multiple_delimiter():
+#     assert add("//[*][%]\n1*2%3") == 6
