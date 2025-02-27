@@ -13,4 +13,5 @@ def add(numbers:int)->int:
     negatives = [n for n in numbers if n < 0]
     if negatives:
         raise ValueError(f"negative numbers not allowed {', '.join(map(str, negatives))}")
-    return sum(numbers)
+    allowed_nums = [n for n in numbers if n <= 1000]
+    return sum(allowed_nums)

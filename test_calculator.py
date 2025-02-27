@@ -29,3 +29,5 @@ def test_negative_numbers_throw_an_exception():
 def test_multi_negative_numbers_show():
     with pytest.raises(ValueError,match="negative numbers not allowed -1, -2"):
         add("-1,-2,3")
+def test_ignore_if_numbers_a_1000():
+    assert add("1,1001") == 1
